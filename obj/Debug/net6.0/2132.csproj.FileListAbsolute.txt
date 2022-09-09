@@ -1,0 +1,15 @@
+C:\Users\coolp\Desktop\C\2132\obj\Debug\net6.0\2132.csproj.AssemblyReference.cache
+C:\Users\coolp\Desktop\C\2132\obj\Debug\net6.0\2132.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\coolp\Desktop\C\2132\obj\Debug\net6.0\2132.AssemblyInfoInputs.cache
+C:\Users\coolp\Desktop\C\2132\obj\Debug\net6.0\2132.AssemblyInfo.cs
+C:\Users\coolp\Desktop\C\2132\obj\Debug\net6.0\2132.csproj.CoreCompileInputs.cache
+C:\Users\coolp\Desktop\C\2132\bin\Debug\net6.0\2132.exe
+C:\Users\coolp\Desktop\C\2132\bin\Debug\net6.0\2132.deps.json
+C:\Users\coolp\Desktop\C\2132\bin\Debug\net6.0\2132.runtimeconfig.json
+C:\Users\coolp\Desktop\C\2132\bin\Debug\net6.0\2132.dll
+C:\Users\coolp\Desktop\C\2132\bin\Debug\net6.0\2132.pdb
+C:\Users\coolp\Desktop\C\2132\obj\Debug\net6.0\2132.dll
+C:\Users\coolp\Desktop\C\2132\obj\Debug\net6.0\refint\2132.dll
+C:\Users\coolp\Desktop\C\2132\obj\Debug\net6.0\2132.pdb
+C:\Users\coolp\Desktop\C\2132\obj\Debug\net6.0\2132.genruntimeconfig.cache
+C:\Users\coolp\Desktop\C\2132\obj\Debug\net6.0\ref\2132.dll
