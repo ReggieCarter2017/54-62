@@ -1,4 +1,4 @@
-﻿int[,] CreatinveMassive(int m, int n)
+﻿int[,] CreatingMassive(int m, int n)
 {
     int[,] array = new int[m, n];
     for (int i = 0; i < m; i++)
@@ -6,40 +6,49 @@
         for (int j = 0; j < n; j++)
         {
             array[i, j] = new Random().Next(1, 10);
-        }
-    }
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            for (int s = 0; s < array.GetLength(1) - 1; s++)
-            {
-                if (array[i, s] < array[i, s + 1])
-                {
-                int temp = array[i, s + 1];
-                array[i, s + 1] = array[i, s];
-                array[i, s] = temp;
-                }
-            }
-        }
-    }
-    return array;   
-}
-int a = 5;
-int b = 6;
-CreatinveMassive(a, b);
-
-void PrintArray(int[,] a)
-{
-    for (int i = 0; i < a.GetLength(0); i++)
-    {
-        for (int j = 0; j < a.GetLength(1); j++)
-        {
-            Console.Write($"{a[i, j]} ");
+            Console.Write($"{array[i, j]} ");
         }
         Console.WriteLine();
     }
+    return array;   
+}
+int a = 4;
+int b = 3;
+
+
+string SumOfMin(int[,] twoArray)
+{
+    int tempResult = 0;
+    int[] array = new int[twoArray.GetLength(0)];
+    for (int i = 0; i < twoArray.GetLength(0); i++)
+        {
+            tempResult = 0;
+
+            for (int j = 0; j < twoArray.GetLength(1); j++)
+            {
+                while (j < twoArray.GetLength(1))
+                {
+                    tempResult += twoArray[i, j];
+                    break;
+                }
+            }
+            array[i] = tempResult;
+            Console.Write(array[i] + " \n");
+        }
+    int minSum = array[0];
+    string finalResult = "";
+    int index = 0;
+    for (int i = 1; i < array.Length; i++)
+    {
+        if (array[i] < minSum) 
+        {
+            index = i+1;
+            minSum = array[i];
+        }
+        else if (array[0] == minSum) index = 1;
+        finalResult = $"{index} -> {minSum}";
+    }
+        return finalResult;
 }
 
-PrintArray(CreatinveMassive(a, b));
-
+Console.Write(SumOfMin(CreatingMassive(a, b)));
