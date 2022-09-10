@@ -1,54 +1,33 @@
-﻿int[,] CreatingMassive(int m, int n)
-{
-    int[,] array = new int[m, n];
-    for (int i = 0; i < m; i++)
-    {
-        for (int j = 0; j < n; j++)
-        {
-            array[i, j] = new Random().Next(1, 10);
-        }
-    }
-    return array;   
-}
+﻿
 int a = 2;
 int b = 2;
-int[,] array1 = CreatingMassive(a, b);
-int[,] array2 = CreatingMassive(a, b);
-void PrintArray(int[,] array)
+int c = 2;
+int[,,] CreatingMassive(int m, int n, int s)
 {
- for (int i = 0; i < array.GetLength(0); i++)
+    int[,,] array = new int[m, n, s];
+    for (int i = 0; i < array.GetLength(0); i++)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            Console.Write(array[i,j]);
-        }
-    Console.WriteLine();
-    }
-    Console.WriteLine();
-}
-PrintArray(array1);
-PrintArray(array2);
-
-int[,] CreateFinalMatrix(int[,] first, int[,] second)
-{
-    int[,] finalMatrix = new int[first.GetLength(0), first.GetLength(1)];
-    for (int i = 0; i < finalMatrix.GetLength(0); i++)
-    {
-        for (int j = 0; j < finalMatrix.GetLength(1); j++)
-        {        int sum = 0;
-            for (int s = 0; s < first.GetLength(0); s++)
+            for (int k = 0; k < array.GetLength(2); k++)
             {
-                sum += array1[i, s] * array2[s, j];
+                array[i, j, k] = new Random().Next(10, 100);
             }
-            finalMatrix[i, j] = sum;
         }
     }
-    return finalMatrix;
+
+    return array;   
 }
 
-PrintArray(CreateFinalMatrix(array1, array2));
-
-
-
-
-
+int[,,] array3diment = CreatingMassive(a, b, c);
+for (int i = 0; i < array3diment.GetLength(0); i++)
+{
+    for (int j = 0; j < array3diment.GetLength(1); j++)
+    {
+        for (int k = 0; k < array3diment.GetLength(2); k++)
+        {
+            Console.Write($"{array3diment[i, j, k]} ({i}, {j}, {k}) ");
+        }
+            Console.WriteLine();
+    }
+}
